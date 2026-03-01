@@ -34,6 +34,7 @@ Ini adalah page yang mendeskripsikan tentang sertifikat apa saja yang saya raih 
 
 Ini adalah footer bar yang dimana ini adalah bagian dari secercah informasi terkait pengembang website ini.
 
+---
 
 ## Struktur dan Penjelasan Setiap Section - HTML
 
