@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Romadhoni Alfatih | Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Muhammad Romadhoni Alfatih</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Tentang Saya</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certificates">Sertifikat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header id="home" class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h1>Website Portfolio</h1>
+                        <p class="mb-4">Mahasiswa biasa yang berkuliah di Universitas Mulawarman, Saya adalah Junior Programmer yang sedang belajar dan mengasah kemampuan teknis di bidang web development.</p>
+                        <a href="#about" class="btn-main">Jelajahi</a>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1 mt-5 mt-lg-0">
+                        <div class="profile-container">
+                            <img :src="profileImage" alt="Muhammad Romadhoni" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="section-bg">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <h2 class="section-title">Tentang Saya</h2>
+                        <div class="bio-text">
+                            <p class="mb-4">Halo! Saya <strong>Muhammad Romadhoni Alfatih</strong>. Saat ini saya sedang menempuh perjalanan akademik di Program Studi Sistem Informasi, Fakultas Teknik - Universitas Mulawarman. Bagi saya, Pemrograman bukan sekadar baris kode, melainkan sarana untuk memecahkan masalah nyata melalui solusi digital yang cerdas.</p>
+                            <p class="mb-5">Fokus utama saya adalah menciptakan pengalaman pengguna yang bermakna melalui clean code dan standar web modern. Sebagai mahasiswa teknik, saya berkomitmen untuk terus mengasah kemampuan teknis dan adaptif di tengah perkembangan teknologi yang sangat cepat.</p>
+                        </div>
+                        
+                        <h4 class="mb-4">Pengalaman</h4>
+                        <div v-for="exp in experiences" :key="exp.id" class="mb-4">
+                            <h5 class="mb-1 fw-bold text-primary">{{ exp.role }}</h5>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-dark fw-medium" v-html="exp.company"></span>
+                                <span class="text-muted small">{{ exp.period }}</span>
+                            </div>
+                            <p class="mt-2 text-muted">{{ exp.desc }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-5 offset-lg-1">
+                        <h2 class="section-title">Keahlian</h2>
+                        <div class="skills-container">
+                            <div v-for="skill in skills" :key="skill.name" class="skill-item mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-bold">
+                                        <i v-else :class="['bi', skill.icon, 'me-2', 'text-primary']"></i>
+                                        {{ skill.name }}
+                                    </span>
+                                    <span class="text-gradient fw-bold">{{ skill.level }}%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" 
+                                         :style="{ width: skill.level + '%' }" 
+                                         :aria-valuenow="skill.level" 
+                                         aria-valuemin="0" 
+                                         aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5 text-muted small border-top pt-3">
+                            <i class="bi bi-info-circle me-1"></i>
+                            Saya berkomitmen untuk terus belajar dan berkembang dalam bidang teknologi, dengan fokus pada pengembangan web dan software engineering.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title mb-3">Sertifikat</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">Sebuah kumpulan sertifikat pengalaman organisasi dan akademik yang telah saya raih selama masa kuliah.</p>
+                </div>
+                
+                <div class="cert-grid">
+                    <div v-for="cert in certificates" :key="cert.id" class="cert-card">
+                        <div class="cert-img-wrapper">
+                            <img :src="cert.image" alt="Certificate Image">
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer-tag">{{ cert.issuer }}</span>
+                            <h3 class="cert-title">{{ cert.title }}</h3>
+                            <div class="cert-footer">
+                                <span class="cert-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    {{ cert.year }}
+                                </span>
+                                <span class="text-primary small fw-bold">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center bg-dark text-white py-5">
+            <div class="container">
+                <p class="mb-2 fw-bold fs-5 text-white">Muhammad Romadhoni Alfatih</p>
+                <p class="small mb-4 text-white-50">Undergraduate Student @ Universitas Mulawarman</p>
+                <div class="d-flex justify-content-center gap-4 mb-4">
+                    <a href="#" class="text-decoration-none footer-link">Instagram</a>
+                    <a href="#" class="text-decoration-none footer-link">GitHub</a>
+                    <a href="#" class="text-decoration-none footer-link">Twitter
+                        
+                    </a>
+                </div>
+                <hr class="border-secondary opacity-25 mb-4">
+                <p class="small text-white-50">&copy; Copyright | Zxrov Foundation 2026.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <script>
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    name: "Muhammad Romadhoni",
+                    profileImage: "DONI BROMO.jpeg",
+                    bio: "I focus on building functional and accessible web applications while pursuing my degree in Computer Science.",
+                    experiences: [
+                        { id: 1, role: "Undergraduate Student", company: "<strong>Faculty of Engineering  -  Information System<br> Universitas Mulawarman</strong>", period: "2024 - Present", desc: "Mengimplementasikan teknologi web terkini dalam pengembangan proyek praktis yang responsif." },
+                        { id: 2, role: "Students Association", company: "<strong>Information System Association (INFORSA)</strong><br><em>Human Resource Development - Staff</em>", period: "2025 - 2026", desc: "Coordinating member development and internal organizational growth." }
+                    ],
+                    skills: [
+                        { name: "Fighting Spirit", icon: "bi-battery-full", level: 90 },
+                        { name: "Sandhika Galih", icon: "bi-youtube", level: 80 },
+                        { name: "Bootstrap 5", icon: "bi-bootstrap", level: 85 },
+                        { name: "Vue.js", icon: "bi-hexagon-fill", level: 70 }
+                    ],
+                    certificates: [
+                        { id: 1, title: "Belajar Penerapan Data Science dengan Microsoft Fabric", issuer: "Dicoding", year: "2026", image: "Sertif Dicoding.png" },
+                        { id: 2, title: "UPGRADING INFORSA  Kabinet Cakrawira ", issuer: "INFORSA", year: "2025", image: "Muhammad Romadhoni Alfatih.png" },
+                        { id: 3, title: "Information System Event (INSEVENT)", issuer: "INFORSA", year: "2025", image: "Muhammad Romadhoni Alfatih_page-0001.jpg" }
+                    ]
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
+
