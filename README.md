@@ -4,17 +4,17 @@ Website portfolio pribadi yang dibuat menggunakan HTML, CSS, Bootstrap 5, dan Vu
 
 Teknologi yang Digunakan
 
-HTML5 → struktur halaman website
+HTML
 
-CSS3 → styling dan layout tampilan
+CSS
 
-Bootstrap 5 → responsive layout dan komponen UI
+Bootstrap 5 
 
-Bootstrap Icons → icon visual
+Bootstrap Icons 
 
-Vue.js 3 → menampilkan data secara dinamis
+Vue.js 
 
-Google Fonts (Inter) → typography
+---
 
 Struktur dan Penjelasan Setiap Section
 1. Navigation Bar
