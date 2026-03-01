@@ -1,4 +1,4 @@
-Web Portfolio - Muhammad Romadhoni Alfatih
+# Web Portfolio - Muhammad Romadhoni Alfatih
 
 Website portfolio pribadi yang dibuat menggunakan HTML, CSS, Bootstrap 5, dan Vue.js untuk menampilkan informasi profil, keahlian, pengalaman, dan sertifikat.
 
@@ -16,7 +16,7 @@ Vue.js
 
 ---
 
-## Tampilan Website
+# Tampilan Website - Muhammad Romadhoni Alfatih
 
 <img width="1919" height="662" alt="image" src="https://github.com/user-attachments/assets/8a664f72-9988-4963-a15d-4f76a0e8cd5b" />
 
@@ -36,7 +36,7 @@ Ini adalah footer bar yang dimana ini adalah bagian dari secercah informasi terk
 
 ---
 
-## Struktur dan Penjelasan Setiap Section - HTML (Integrasi dengan Bootstrap dan Vue.JS)
+# Struktur dan Penjelasan Setiap Section - HTML (Integrasi dengan Bootstrap dan Vue.JS)
 
 1. Navigation Bar
 
@@ -86,9 +86,9 @@ Tampilan Footer berisi: Nama, Status Mahasiswa, Link Sosmed, Hak Cipta
 
 ---
 
-## Struktur dan Penjelasan Setiap Section - CSS
+# Struktur dan Penjelasan Setiap Section - CSS
 
-1. Styling Warna dan Font
+## 1. Styling Warna dan Font
 
 <img width="779" height="245" alt="image" src="https://github.com/user-attachments/assets/50ae6450-46d5-44f3-91e9-4a9a9767dc7b" />
 
