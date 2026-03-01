@@ -35,7 +35,7 @@ Ini adalah page yang mendeskripsikan tentang sertifikat apa saja yang saya raih 
 Ini adalah footer bar yang dimana ini adalah bagian dari secercah informasi terkait pengembang website ini.
 
 
-##Struktur dan Penjelasan Setiap Section - HTML
+## Struktur dan Penjelasan Setiap Section - HTML
 
 <img width="1286" height="350" alt="image" src="https://github.com/user-attachments/assets/619684e0-c16b-44be-891d-3f017c5c20de" />
 
